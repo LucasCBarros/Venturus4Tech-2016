@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.vntlab.ihomesystem2.MainActivity"
+    android:background="#e1e1e1">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_top"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
+
+        <ImageView
+            android:id="@+id/img_background"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bgon"
+            android:scaleType="centerCrop"/>
+
+
+        <ImageView
+            android:id="@+id/img_lamp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_luz_on"
+            android:layout_gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/txt_statusLamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luz Desativada"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+            <Switch
+                android:id="@+id/swt_statusLamp"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="8dp"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceSmall" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="18dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperatura"
+                android:layout_alignParentLeft="true"
+                android:padding="8dp"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <ImageView
+                    android:id="@+id/img_temometer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_termometro"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"/>
+
+                <TextView
+
+                    android:id="@+id/title_text_view3"
+                    android:text="30º"
+                    android:textSize="80dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_blue_bright"
+
+                     />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>
